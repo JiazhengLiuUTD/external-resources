@@ -210,6 +210,17 @@ void OpenMV::readColorBlockPos()
     recive_data();
 }
 
+void OpenMV::readColorBlockColor()
+{
+    clear_data();
+    timeoutTime = 500;
+
+    String txData = "$1,E,0,0,0#";
+
+    openmvSerial->print(txData);
+    recive_data();
+}
+
 void OpenMV::getQRCodeInfo(uint8_t type)
 {
     clear_data();
@@ -246,7 +257,13 @@ void OpenMV::setLineTrackMode(uint8_t type)
     clear_data();
     timeoutTime = 1000;
 
-    String txData = "$3,A,";
+    //String txData = "$3,A,";
+    //txData += type;
+    //txData += ",0,0#";
+
+    String txData = "$";
+    txData += openMVMode;
+    txData += ",A,";
     txData += type;
     txData += ",0,0#";
 
@@ -262,7 +279,13 @@ void OpenMV::setFlipVertical(bool state)
     clear_data();
     timeoutTime = 1000;
 
-    String txData = "$3,B,";
+    //String txData = "$3,B,";
+    //txData += state;
+    //txData += ",0,0#";
+
+    String txData = "$";
+    txData += openMVMode;
+    txData += ",B,";
     txData += state;
     txData += ",0,0#";
 
@@ -278,7 +301,13 @@ void OpenMV::setFlipHorizontal(bool state)
     clear_data();
     timeoutTime = 1000;
 
-    String txData = "$3,C,";
+    //String txData = "$3,C,";
+    //txData += state;
+    //txData += ",0,0#";
+
+    String txData = "$";
+    txData += openMVMode;
+    txData += ",C,";
     txData += state;
     txData += ",0,0#";
 
@@ -294,7 +323,10 @@ int16_t OpenMV::readLineDistanceWithEdge()
     clear_data();
     timeoutTime = 1000;
 
-    String txData = "$3,E,0,0,0#";
+    //String txData = "$,E,0,0,0#";
+    String txData = "$";
+    txData += openMVMode;
+    txData += ",E,0,0,0#";
 
     Serial.print("Info: readLineDistanceWithEdge() tx data: ");
     Serial.println(txData);
@@ -309,7 +341,10 @@ int16_t OpenMV::readLineAngle()
     clear_data();
     timeoutTime = 1000;
 
-    String txData = "$3,F,0,0,0#";
+    //String txData = "$3,F,0,0,0#";
+    String txData = "$";
+    txData += openMVMode;
+    txData += ",F,0,0,0#";
 
     Serial.print("Info: readLineAngle() tx data: ");
     Serial.println(txData);
@@ -324,7 +359,10 @@ int16_t OpenMV::readLineLength()
     clear_data();
     timeoutTime = 1000;
 
-    String txData = "$3,G,0,0,0#";
+    //String txData = "$3,G,0,0,0#";
+    String txData = "$";
+    txData += openMVMode;
+    txData += ",G,0,0,0#";
 
     Serial.print("Info: readLineLength() tx data: ");
     Serial.println(txData);
@@ -339,7 +377,10 @@ int16_t OpenMV::readErrorOutput()
     clear_data();
     timeoutTime = 1000;
 
-    String txData = "$3,H,0,0,0#";
+    //String txData = "$3,H,0,0,0#";
+    String txData = "$";
+    txData += openMVMode;
+    txData += ",H,0,0,0#";
 
     Serial.print("Info: readErrorOutput() tx data: ");
     Serial.println(txData);
@@ -383,3 +424,48 @@ void OpenMV::setLineTrackThreshold(uint8_t min, uint8_t max)
     recive_data();
 }
 
+void OpenMV::readBlockColor()
+{
+    clear_data();
+    timeoutTime=500;
+
+    String txData="$4,A,0,0,0#";
+
+    openmvSerial->print(txData);
+    recive_data();
+}
+
+
+void OpenMV::locateColor(uint8_t id){
+    clear_data();
+    timeoutTime = 500;
+
+    String txData = "$4,B,";
+    txData += id;
+    txData += "0,0,0#";
+
+    // Serial.print("Info: readColorBlockPos() tx data: ");
+    // Serial.println(txData);
+
+    openmvSerial->print(txData);
+    recive_data();
+}
+
+void OpenMV::resetBlockColorRecognize()
+{
+    if(openMVMode != 4){
+        Serial.println("Warn: Cannot reset white balance in this mode.");
+        return;
+    }
+
+    clear_data();
+    timeoutTime = 2000;
+
+    String txData = "$4,C,0,0,0#";
+
+    // Serial.print("Info: resetWhiteBalance() tx data: ");
+    // Serial.println(txData);
+
+    openmvSerial->print(txData);
+    recive_data();
+}

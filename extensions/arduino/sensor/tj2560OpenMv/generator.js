@@ -44,6 +44,10 @@ function addGenerator (Blockly) {
         return [`openmv.y.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
     };
 
+    Blockly.Arduino.tj2560OpenMv_getColorBlockColor = function () {
+        return `openmv.readColorBlockColor();\n`;
+    };
+
     Blockly.Arduino.tj2560OpenMv_getQRCodePosition = function () {
         return `openmv.getQRCodeInfo(1);\n`;
     };
@@ -149,6 +153,46 @@ function addGenerator (Blockly) {
         const max = Blockly.Arduino.valueToCode(block, 'MAX', Blockly.Arduino.ORDER_ATOMIC);
 
         return `openmv.setLineTrackThreshold(${min}, ${max});\n`;
+    };
+
+    Blockly.Arduino.tj2560OpenMv_readColorBlob = function () {
+        return `openmv.readBlockColor();\n`;
+    };
+
+    Blockly.Arduino.tj2560OpenMv_blobColor = function () {
+        return [`openmv.z.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_red = function () {
+        return [`1`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_green = function () {
+        return [`2`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_blue = function () {
+        return [`3`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_yellow = function () {
+        return [`4`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_blank = function () {
+        return [`0`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_L = function () {
+        return [`openmv.z.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_A = function () {
+        return [`openmv.x.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_B = function () {
+        return [`openmv.y.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
     };
 
     return Blockly;

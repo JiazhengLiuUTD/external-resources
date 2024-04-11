@@ -283,5 +283,7 @@ module.exports = {
         'tj2560OpenMv.description': 'OpenMV 视觉模块。',
         'tj2560PowerCore.name': '核心能量模块',
         'tj2560PowerCore.description': '核心能量模块。',
+        'tj2560RobotArm.name':'四轴机械臂',
+        'tj2560RobotArm.description':'四轴机械臂。',
     }
 };

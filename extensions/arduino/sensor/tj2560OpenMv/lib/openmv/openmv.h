@@ -15,6 +15,7 @@ public:
 
     void learnColorBlock();
     void readColorBlockPos();
+    void readColorBlockColor();
 
     void getQRCodeInfo(uint8_t type);
     bool isGetQRCode();
@@ -28,6 +29,10 @@ public:
     int16_t readErrorOutput();
     void setLineTrackOpt(uint8_t mode);
     void setLineTrackThreshold(uint8_t min, uint8_t max);
+    void readBlockColor();
+    void locateColor(uint8_t id);
+    void resetBlockColorRecognize();
+    
 
     // 5 位解析分割的数据
     String cmd = "";

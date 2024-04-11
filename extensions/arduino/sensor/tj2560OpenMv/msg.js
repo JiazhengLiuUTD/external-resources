@@ -51,7 +51,19 @@ function addMsg (Blockly) {
         TJ2560OPENMV_GETLINELENGTH: 'camera module line length',
         TJ2560OPENMV_GETLINEERROROUTPUT: 'camera module line error output',
         TJ2560OPENMV_SETLINECOLOR: 'camera module set line color %1',
-        TJ2560OPENMV_SETLINETHRESHOLD: 'camera module set line track threshold min %1 max %2'
+        TJ2560OPENMV_SETLINETHRESHOLD: 'camera module set line track threshold min %1 max %2',
+        TJ2560OPENMV_SETMODE_COLORBLOB: 'color recognize and locate',
+        TJ2560OPENMV_READCOLORBLOB:'read color and location of blob',
+        TJ2560OPENMV_BLOBCOLOR:'blob color',
+        TJ2560OPENMV_RED:'red',
+        TJ2560OPENMV_GREEN:'green',
+        TJ2560OPENMV_BLUE:'blue',
+        TJ2560OPENMV_YELLOW:'yellow',
+        TJ2560OPENMV_BLANK:'no color',
+        TJ2560OPENMV_GETCOLORBLOCKCOLOR:'read LAB',
+        TJ2560OPENMV_L:'L',
+        TJ2560OPENMV_A:'A',
+        TJ2560OPENMV_B:'B',
     });
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
         TJ2560OPENMV_CATEGORY: '视觉模块',
@@ -103,7 +115,19 @@ function addMsg (Blockly) {
         TJ2560OPENMV_SETLINECOLOR: '视觉模块设置巡线颜色 %1',
         TJ2560OPENMV_LINE_BLACK: '白底黑线',
         TJ2560OPENMV_LINE_WHITE: '黑底白线',
-        TJ2560OPENMV_SETLINETHRESHOLD: '视觉模块设置巡线阈值 最小值 %1 最大值 %2'
+        TJ2560OPENMV_SETLINETHRESHOLD: '视觉模块设置巡线阈值 最小值 %1 最大值 %2',
+        TJ2560OPENMV_SETMODE_COLORBLOB:'颜色识别定位',
+        TJ2560OPENMV_READCOLORBLOB:'视觉模块读取色块颜色和位置',
+        TJ2560OPENMV_BLOBCOLOR:'色块颜色',
+        TJ2560OPENMV_RED:'红色',
+        TJ2560OPENMV_GREEN:'绿色',
+        TJ2560OPENMV_BLUE:'蓝色',
+        TJ2560OPENMV_YELLOW:'黄色',
+        TJ2560OPENMV_BLANK:'未发现色块',
+        TJ2560OPENMV_GETCOLORBLOCKCOLOR:'视觉模块读取色块颜色通道数值',
+        TJ2560OPENMV_L:'L通道数值',
+        TJ2560OPENMV_A:'A通道数值',
+        TJ2560OPENMV_B:'B通道数值',
     });
     return Blockly;
 }

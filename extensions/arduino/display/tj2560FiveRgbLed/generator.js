@@ -27,6 +27,7 @@ function addGenerator (Blockly) {
 
     Blockly.Arduino.tj2560FiveRgbLed_fill = function (block) {
         const port = block.getFieldValue('PORT');
+        FiveRgbLed_port = port;
         const first = Blockly.Arduino.valueToCode(block, 'FIRST', Blockly.Arduino.ORDER_ATOMIC);
         const count = Blockly.Arduino.valueToCode(block, 'COUNT', Blockly.Arduino.ORDER_ATOMIC);
         const colour = Blockly.Arduino.valueToCode(block, 'COLOR', Blockly.Arduino.ORDER_ATOMIC).replace('#', '0x');
