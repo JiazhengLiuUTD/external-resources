@@ -17,7 +17,7 @@ const tj2560RobotArm = formatMessage => ({
     generator: 'generator.js',
     toolbox: 'toolbox.js',
     msg: 'msg.js',
-    library: null,
+    library: 'lib',
     tags: ['actuator'],
     helpLink: null
 });

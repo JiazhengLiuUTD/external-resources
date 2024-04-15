@@ -36,16 +36,16 @@ function addBlocks (Blockly) {
                         type: 'field_dropdown',
                         name: 'MOVE',
                         options: [
-                            [Blockly.Msg.TJ2560ROBOTARM_G00, '00'],
-                            [Blockly.Msg.TJ2560ROBOTARM_G01, '01'],
-                            [Blockly.Msg.TJ2560ROBOTARM_G05, '05']]
+                            [Blockly.Msg.TJ2560ROBOTARM_G00, 'MOVEJ'],
+                            [Blockly.Msg.TJ2560ROBOTARM_G01, 'MOVEL'],
+                            [Blockly.Msg.TJ2560ROBOTARM_G05, 'JUMP']]
                     },
                     {
                         type: 'field_dropdown',
                         name: 'POS',
                         options: [
-                            [Blockly.Msg.TJ2560ROBOTARM_G90, '90'],
-                            [Blockly.Msg.TJ2560ROBOTARM_G91, '91']]
+                            [Blockly.Msg.TJ2560ROBOTARM_G90, 'GOTO'],
+                            [Blockly.Msg.TJ2560ROBOTARM_G91, 'INCREMENT']]
                     },
                     {
                         type: 'input_value',
@@ -125,8 +125,8 @@ function addBlocks (Blockly) {
                         type: 'field_dropdown',
                         name: 'POS',
                         options: [
-                            [Blockly.Msg.TJ2560ROBOTARM_G90, '90'],
-                            [Blockly.Msg.TJ2560ROBOTARM_G91, '91']]
+                            [Blockly.Msg.TJ2560ROBOTARM_G90, 'GOTO'],
+                            [Blockly.Msg.TJ2560ROBOTARM_G91, 'INCREMENT']]
                     },
                     {
                         type: 'input_value',
@@ -170,8 +170,8 @@ function addBlocks (Blockly) {
                         type: 'field_dropdown',
                         name: 'REVOLVE',
                         options: [
-                            [Blockly.Msg.TJ2560ROBOTARM_CCW, '-'],
-                            [Blockly.Msg.TJ2560ROBOTARM_CW, '']]
+                            [Blockly.Msg.TJ2560ROBOTARM_CW, '1'],
+                            [Blockly.Msg.TJ2560ROBOTARM_CCW, '-1']]
                     },
                     {
                         type: 'input_value',
@@ -194,15 +194,15 @@ function addBlocks (Blockly) {
                         type: 'field_dropdown',
                         name: 'REVOLVE',
                         options: [
-                            [Blockly.Msg.TJ2560ROBOTARM_CW, '02'],
-                            [Blockly.Msg.TJ2560ROBOTARM_CCW, '03']]
+                            [Blockly.Msg.TJ2560ROBOTARM_CW, 'CW'],
+                            [Blockly.Msg.TJ2560ROBOTARM_CCW, 'CCW']]
                     },
                     {
                         type: 'field_dropdown',
                         name: 'POS',
                         options: [
-                            [Blockly.Msg.TJ2560ROBOTARM_G90, '90'],
-                            [Blockly.Msg.TJ2560ROBOTARM_G91, '91']]
+                            [Blockly.Msg.TJ2560ROBOTARM_G90, 'GOTO'],
+                            [Blockly.Msg.TJ2560ROBOTARM_G91, 'INCREMENT']]
                     },
                     
                     {
@@ -263,9 +263,9 @@ function addBlocks (Blockly) {
                         type: 'field_dropdown',
                         name: 'STA',
                         options: [
-                            [Blockly.Msg.TJ2560ROBOTARM_SUCTION_CUP_ON, '1000'],
-                            [Blockly.Msg.TJ2560ROBOTARM_SUCTION_CUP_OFF, '0'],
-                            [Blockly.Msg.TJ2560ROBOTARM_SUCTION_CUP_BLOW, '500']]
+                            [Blockly.Msg.TJ2560ROBOTARM_SUCTION_CUP_ON, 'ON'],
+                            [Blockly.Msg.TJ2560ROBOTARM_SUCTION_CUP_OFF, 'OFF'],
+                            [Blockly.Msg.TJ2560ROBOTARM_SUCTION_CUP_BLOW, 'BLOW']]
                     }
                 ],
                 colour: color,

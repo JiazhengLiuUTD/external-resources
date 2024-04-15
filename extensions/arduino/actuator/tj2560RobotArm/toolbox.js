@@ -19,22 +19,22 @@ function addToolbox () {
     </block>
     <block type="tj2560RobotArm_M20" id="tj2560RobotArm_M20">
         <value name="X">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="Y">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="Z">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="A">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
@@ -48,22 +48,22 @@ function addToolbox () {
     </block>
     <block type="tj2560RobotArm_M21" id="tj2560RobotArm_M21">
         <value name="X">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="Y">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="Z">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="A">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
@@ -77,34 +77,34 @@ function addToolbox () {
     </block>
     <block type="tj2560RobotArm_Arc_Move" id="tj2560RobotArm_Arc_Move">
         <value name="X">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="Y">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="Z">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="R">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
     </block>
     <block type="tj2560RobotArm_Angle_Move" id="tj2560RobotArm_Angle_Move">
         <value name="ANGLE">
-            <shadow type="math_number">
+            <shadow type="math_angle">
                 <field name="NUM">90</field>
             </shadow>
         </value>
         <value name="N">
-            <shadow type="math_number">
+            <shadow type="math_uint8_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
@@ -112,17 +112,17 @@ function addToolbox () {
     <sep gap="40"/>
     <block type="tj2560RobotArm_Tool_Offset" id="tj2560RobotArm_Tool_Offset">
         <value name="X">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="Y">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="Z">
-            <shadow type="math_number">
+            <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
