@@ -11,16 +11,6 @@ function addToolbox () {
     <block type="tj2560OpenMv_setMode" id="tj2560OpenMv_setMode"></block>
     <block type="tj2560OpenMv_setLight" id="tj2560OpenMv_setLight"></block>
     <sep gap="36"/>
-    <block type="tj2560OpenMv_readColorBlob" id="tj2560OpenMv_readColorBlob"></block>
-    <block type="tj2560OpenMv_blobColor" id="tj2560OpenMv_blobColor"></block>
-    <block type="tj2560OpenMv_blank" id="tj2560OpenMv_blank"></block>
-    <block type="tj2560OpenMv_red" id="tj2560OpenMv_red"></block>
-    <block type="tj2560OpenMv_green" id="tj2560OpenMv_green"></block>
-    <block type="tj2560OpenMv_blue" id="tj2560OpenMv_blue"></block>
-    <block type="tj2560OpenMv_yellow" id="tj2560OpenMv_yellow"></block>
-    <block type="tj2560OpenMv_colorBlockPositionX" id="tj2560OpenMv_colorBlockPositionX"></block>
-    <block type="tj2560OpenMv_colorBlockPositionY" id="tj2560OpenMv_colorBlockPositionY"></block>
-    <sep gap="36"/>
     <block type="tj2560OpenMv_resetWhiteBalance" id="tj2560OpenMv_resetWhiteBalance"></block>
     <block type="tj2560OpenMv_learnColorBlock" id="tj2560OpenMv_learnColorBlock"></block>
     <block type="tj2560OpenMv_getColorBlockPosition" id="tj2560OpenMv_getColorBlockPosition"></block>
@@ -71,3 +61,14 @@ function addToolbox () {
 }
 
 exports = addToolbox;
+
+/*<sep gap="36"/>
+    <block type="tj2560OpenMv_readColorBlob" id="tj2560OpenMv_readColorBlob"></block>
+    <block type="tj2560OpenMv_blobColor" id="tj2560OpenMv_blobColor"></block>
+    <block type="tj2560OpenMv_blank" id="tj2560OpenMv_blank"></block>
+    <block type="tj2560OpenMv_red" id="tj2560OpenMv_red"></block>
+    <block type="tj2560OpenMv_green" id="tj2560OpenMv_green"></block>
+    <block type="tj2560OpenMv_blue" id="tj2560OpenMv_blue"></block>
+    <block type="tj2560OpenMv_yellow" id="tj2560OpenMv_yellow"></block>
+    <block type="tj2560OpenMv_colorBlockPositionX" id="tj2560OpenMv_colorBlockPositionX"></block>
+    <block type="tj2560OpenMv_colorBlockPositionY" id="tj2560OpenMv_colorBlockPositionY"></block>*/
