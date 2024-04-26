@@ -170,8 +170,8 @@ function addBlocks (Blockly) {
                         type: 'field_dropdown',
                         name: 'REVOLVE',
                         options: [
-                            [Blockly.Msg.TJ2560ROBOTARM_CW, '1'],
-                            [Blockly.Msg.TJ2560ROBOTARM_CCW, '-1']]
+                            [Blockly.Msg.TJ2560ROBOTARM_CW, '-1'],
+                            [Blockly.Msg.TJ2560ROBOTARM_CCW, '1']]
                     },
                     {
                         type: 'input_value',

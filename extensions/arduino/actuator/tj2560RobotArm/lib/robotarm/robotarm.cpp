@@ -18,8 +18,8 @@ void RobotArm::begin()
 
 void RobotArm::reset()
 {
-    msg="M21 G90 G00 X0 Y0 Z0 A0 F2000\r\n";
-    //msg="$m\r\n";
+    //msg="M21 G90 G00 X0 Y0 Z0 A0 F2000\r\n";
+    msg="$m\r\n";
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
@@ -73,7 +73,7 @@ void RobotArm::axis(String pos,int x,int y,int z,int a)
     Serial.print("Message Sent: ");
     Serial.println(msg);
 }
-void RobotArm::axis_move(String joint, int revolve, uint32_t n)
+void RobotArm::axis_move(String joint, int revolve, int n)
 {
     msg="M21 G91 G00 ";
     msg+=joint+String(n*revolve);

@@ -21,7 +21,7 @@ public:
     void cartesian_lin(String pos,String move,int x,int y,int z,int a);
     void dir_move(String dir, uint32_t n);
     void axis(String pos,int x,int y,int z,int a);
-    void axis_move(String joint, int revolve, uint32_t n);
+    void axis_move(String joint, int revolve, int n);
     void arc_move(String pos,String revolve,int x,int y,int z,int r);
     void tool_offset(int x,int y,int z);
     void suction_cup(String state);

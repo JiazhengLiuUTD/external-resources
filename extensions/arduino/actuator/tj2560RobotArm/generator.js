@@ -52,7 +52,7 @@ function addGenerator (Blockly) {
         const revolve = this.getFieldValue('REVOLVE');
         const n = Blockly.Arduino.valueToCode(block, 'N', Blockly.Arduino.ORDER_ATOMIC);
 
-        return `robotarm.axis_move(${joint},${revolve},${n});\n`;
+        return `robotarm.axis_move("${joint}",${revolve},${n});\n`;
     };
 
     Blockly.Arduino.tj2560RobotArm_Arc_Move = function (block) {
