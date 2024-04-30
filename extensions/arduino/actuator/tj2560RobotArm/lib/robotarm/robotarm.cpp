@@ -18,8 +18,8 @@ void RobotArm::begin()
 
 void RobotArm::reset()
 {
-    //msg="M21 G90 G00 X0 Y0 Z0 A0 F2000\r\n";
-    msg="$m\r\n";
+    msg="M21 G90 G00 X0 Y0 Z0 A0 F2000\r\n";
+    //msg="$m\r\n";
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
