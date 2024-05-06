@@ -10,21 +10,30 @@
 #define ON "1000"
 #define OFF "0"
 #define BLOW "500"
+#define JOINT1 "$154="
+#define JOINT2 "$155="
+#define JOINT3 "$156="
+#define OFFSET_X "$46="
+#define OFFSET_Y "$47="
+#define OFFSET_Z "$48="
 
 class RobotArm
 {
 public:
     RobotArm();
+    void info_recv();
     void begin();
     void reset();
+    void offset(String joint,uint32_t n);
     void set_speed(uint32_t speed);
     void cartesian_lin(String pos,String move,int x,int y,int z,int a);
     void dir_move(String dir, uint32_t n);
     void axis(String pos,int x,int y,int z,int a);
     void axis_move(String joint, int revolve, int n);
     void arc_move(String pos,String revolve,int x,int y,int z,int r);
-    void tool_offset(int x,int y,int z);
+    void tool_offset(String d,int n);
     void suction_cup(String state);
 private:
     String msg="";
+    String info="";
 };

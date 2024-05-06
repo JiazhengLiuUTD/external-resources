@@ -9,6 +9,13 @@ function addToolbox () {
 <category name="%{BKY_TJ2560ROBOTARM_CATEGORY}" id="TJ2560ROBOTARM_CATEGORY" colour="#FA3274" secondaryColour="#B92656" iconURI="${iconURI}">
     <block type="tj2560RobotArm_init" id="tj2560RobotArm_init"></block>
     <block type="tj2560RobotArm_reset" id="tj2560RobotArm_reset"></block>
+    <block type="tj2560RobotArm_offset" id="tj2560RobotArm_offset">
+        <value name="N">
+            <shadow type="math_uint8_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+    </block>
     <sep gap="40"/>
     <block type="tj2560RobotArm_Speed" id="tj2560RobotArm_Speed">
         <value name="SPEED">
@@ -111,17 +118,7 @@ function addToolbox () {
     </block>
     <sep gap="40"/>
     <block type="tj2560RobotArm_Tool_Offset" id="tj2560RobotArm_Tool_Offset">
-        <value name="X">
-            <shadow type="math_int9_number">
-                <field name="NUM">0</field>
-            </shadow>
-        </value>
-        <value name="Y">
-            <shadow type="math_int9_number">
-                <field name="NUM">0</field>
-            </shadow>
-        </value>
-        <value name="Z">
+        <value name="N">
             <shadow type="math_int9_number">
                 <field name="NUM">0</field>
             </shadow>

@@ -33,12 +33,13 @@ function addMsg (Blockly) {
         TJ2560ROBOTARM_CW: '顺时针',
         TJ2560ROBOTARM_CCW: '逆时针',
         TJ2560ROBOTARM_ARC_MOVE: '机械臂按圆弧轨迹沿 %1 移动至 %2 X %3 Y %4 Z %5 半径 %6',
-        TJ2560ROBOTARM_TOOL_OFFSET: '工具偏移 X %1 Y %2 Z %3',
+        TJ2560ROBOTARM_TOOL_OFFSET: '工具沿 %1 轴偏移 %2',
         TJ2560ROBOTARM_SUCTION_CUP:'吸盘 %1',
         TJ2560ROBOTARM_SUCTION_CUP_ON:'开',
         TJ2560ROBOTARM_SUCTION_CUP_OFF:'关',
         TJ2560ROBOTARM_SUCTION_CUP_BLOW:'吹',
         TJ2560ROBOTARM_ANGLE_MOVE:'向 %1 角度方向运动 %2',
+        TJ2560ROBOTARM_OFFSET:'机械臂关节 %1 校准至 %2',
     });
     return Blockly;
 }

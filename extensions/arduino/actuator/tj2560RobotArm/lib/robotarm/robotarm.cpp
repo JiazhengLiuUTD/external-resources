@@ -3,6 +3,18 @@
 RobotArm::RobotArm()
 {
     msg="";
+    info="";
+}
+
+void RobotArm::info_recv()
+{
+     while(Serial3.available() == 0){
+    }
+    delay(200);
+    Serial.print("Info Received: ");
+    while (!(Serial3.available() == 0)) {
+        Serial.print(String(char(Serial3.read())));
+    }
 }
 
 void RobotArm::begin()
@@ -13,7 +25,21 @@ void RobotArm::begin()
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
-    Serial.println(msg);
+    Serial.print(msg);
+    info_recv();
+    info_recv();
+    Serial.println("");
+}
+
+void RobotArm::offset(String joint,uint32_t n)
+{
+    msg=joint+String(n)+"\r\n";
+    Serial3.print(msg);
+
+    Serial.print("Message Sent: ");
+    Serial.print(msg);
+    info_recv();
+    Serial.println("");
 }
 
 void RobotArm::reset()
@@ -23,7 +49,9 @@ void RobotArm::reset()
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
-    Serial.println(msg);
+    Serial.print(msg);
+    info_recv();
+    Serial.println("");
 }
 void RobotArm::set_speed(uint32_t speed)
 {
@@ -31,7 +59,9 @@ void RobotArm::set_speed(uint32_t speed)
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
-    Serial.println(msg);
+    Serial.print(msg);
+    info_recv();
+    Serial.println("");
 }
 void RobotArm::cartesian_lin(String pos,String move,int x,int y,int z,int a)
 {
@@ -46,7 +76,9 @@ void RobotArm::cartesian_lin(String pos,String move,int x,int y,int z,int a)
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
-    Serial.println(msg);
+    Serial.print(msg);
+    info_recv();
+    Serial.println("");
 }
 void RobotArm::dir_move(String dir, uint32_t n)
 {
@@ -56,7 +88,9 @@ void RobotArm::dir_move(String dir, uint32_t n)
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
-    Serial.println(msg);
+    Serial.print(msg);
+    info_recv();
+    Serial.println("");
 }
 void RobotArm::axis(String pos,int x,int y,int z,int a)
 {
@@ -71,7 +105,9 @@ void RobotArm::axis(String pos,int x,int y,int z,int a)
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
-    Serial.println(msg);
+    Serial.print(msg);
+    info_recv();
+    Serial.println("");
 }
 void RobotArm::axis_move(String joint, int revolve, int n)
 {
@@ -81,7 +117,9 @@ void RobotArm::axis_move(String joint, int revolve, int n)
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
-    Serial.println(msg);
+    Serial.print(msg);
+    info_recv();
+    Serial.println("");
 }
 void RobotArm::arc_move(String pos,String revolve,int x,int y,int z,int r)
 {
@@ -96,17 +134,19 @@ void RobotArm::arc_move(String pos,String revolve,int x,int y,int z,int r)
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
-    Serial.println(msg);
+    Serial.print(msg);
+    info_recv();
+    Serial.println("");
 }
-void RobotArm::tool_offset(int x,int y,int z)
+void RobotArm::tool_offset(String d,int n)
 {
-    msg="$46="+String(x)+"\r\n";
-    msg+="$47="+String(x)+"\r\n";
-    msg+="$48="+String(x)+"\r\n";
+    msg=d+String(n)+"\r\n";
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
-    Serial.println(msg);
+    Serial.print(msg);
+    info_recv();
+    Serial.println("");
 }
 void RobotArm::suction_cup(String state)
 {
@@ -116,5 +156,7 @@ void RobotArm::suction_cup(String state)
     Serial3.print(msg);
 
     Serial.print("Message Sent: ");
-    Serial.println(msg);
+    Serial.print(msg);
+    info_recv();
+    Serial.println("");
 }

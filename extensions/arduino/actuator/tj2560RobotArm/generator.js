@@ -13,6 +13,13 @@ function addGenerator (Blockly) {
         return `robotarm.reset();\n`;
     };
 
+    Blockly.Arduino.tj2560RobotArm_offset = function (block) {
+        const joint = this.getFieldValue('JOINT');
+        const n = Blockly.Arduino.valueToCode(block, 'N', Blockly.Arduino.ORDER_ATOMIC);
+
+        return `robotarm.offset(${joint},${n});\n`;
+    };
+
     Blockly.Arduino.tj2560RobotArm_Speed = function (block) {
         const speed = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
 
@@ -67,11 +74,10 @@ function addGenerator (Blockly) {
     };
 
     Blockly.Arduino.tj2560RobotArm_Tool_Offset = function (block) {
-        const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
-        const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
-        const z = Blockly.Arduino.valueToCode(block, 'Z', Blockly.Arduino.ORDER_ATOMIC);
+        const d = this.getFieldValue('D');
+        const n = Blockly.Arduino.valueToCode(block, 'N', Blockly.Arduino.ORDER_ATOMIC);
 
-        return `robotarm.tool_offset(${x},${y},${z});\n`;
+        return `robotarm.tool_offset(${d},${n});\n`;
     };
 
     Blockly.Arduino.tj2560RobotArm_Suction_Cup = function (block) {

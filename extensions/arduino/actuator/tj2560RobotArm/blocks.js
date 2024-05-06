@@ -27,6 +27,31 @@ function addBlocks (Blockly) {
         }
     };
 
+    Blockly.Blocks.tj2560RobotArm_offset = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560ROBOTARM_OFFSET,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'JOINT',
+                        options: [
+                            ['1', 'JOINT1'],
+                            ['2', 'JOINT2'],
+                            ['3', 'JOINT3']]
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'N'
+                    }
+                ],
+                colour: color,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
     Blockly.Blocks.tj2560RobotArm_M20 = {
         init: function () {
             this.jsonInit({
@@ -233,18 +258,18 @@ function addBlocks (Blockly) {
         init: function () {
             this.jsonInit({
                 message0: Blockly.Msg.TJ2560ROBOTARM_TOOL_OFFSET,
-                args0: [                   
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'D',
+                        options: [
+                            ['X', 'OFFSET_X'],
+                            ['Y', 'OFFSET_Y'],
+                            ['Z', 'OFFSET_Z']]
+                    },                   
                     {
                         type: 'input_value',
-                        name: 'X'
-                    },
-                    {
-                        type: 'input_value',
-                        name: 'Y'
-                    },
-                    {
-                        type: 'input_value',
-                        name: 'Z'
+                        name: 'N'
                     }
                 ],
                 colour: color,
