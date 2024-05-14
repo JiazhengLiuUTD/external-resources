@@ -21,6 +21,16 @@ function addToolbox () {
     <block type="tj2560OpenMv_A" id="tj2560OpenMv_A"></block>
     <block type="tj2560OpenMv_B" id="tj2560OpenMv_B"></block>
     <sep gap="36"/>
+    <block type="tj2560OpenMv_readColorBlob" id="tj2560OpenMv_readColorBlob"></block>
+    <block type="tj2560OpenMv_blobColor" id="tj2560OpenMv_blobColor"></block>
+    <block type="tj2560OpenMv_blank" id="tj2560OpenMv_blank"></block>
+    <block type="tj2560OpenMv_red" id="tj2560OpenMv_red"></block>
+    <block type="tj2560OpenMv_green" id="tj2560OpenMv_green"></block>
+    <block type="tj2560OpenMv_blue" id="tj2560OpenMv_blue"></block>
+    <block type="tj2560OpenMv_yellow" id="tj2560OpenMv_yellow"></block>
+    <block type="tj2560OpenMv_colorBlockPositionX" id="tj2560OpenMv_colorBlockPositionX"></block>
+    <block type="tj2560OpenMv_colorBlockPositionY" id="tj2560OpenMv_colorBlockPositionY"></block>
+    <sep gap="36"/>
     <block type="tj2560OpenMv_getQRCodePosition" id="tj2560OpenMv_getQRCodePosition"></block>
     <block type="tj2560OpenMv_QRCodePositionX" id="tj2560OpenMv_QRCodePositionX"></block>
     <block type="tj2560OpenMv_QRCodePositionY" id="tj2560OpenMv_QRCodePositionY"></block>
@@ -62,13 +72,4 @@ function addToolbox () {
 
 exports = addToolbox;
 
-/*<sep gap="36"/>
-    <block type="tj2560OpenMv_readColorBlob" id="tj2560OpenMv_readColorBlob"></block>
-    <block type="tj2560OpenMv_blobColor" id="tj2560OpenMv_blobColor"></block>
-    <block type="tj2560OpenMv_blank" id="tj2560OpenMv_blank"></block>
-    <block type="tj2560OpenMv_red" id="tj2560OpenMv_red"></block>
-    <block type="tj2560OpenMv_green" id="tj2560OpenMv_green"></block>
-    <block type="tj2560OpenMv_blue" id="tj2560OpenMv_blue"></block>
-    <block type="tj2560OpenMv_yellow" id="tj2560OpenMv_yellow"></block>
-    <block type="tj2560OpenMv_colorBlockPositionX" id="tj2560OpenMv_colorBlockPositionX"></block>
-    <block type="tj2560OpenMv_colorBlockPositionY" id="tj2560OpenMv_colorBlockPositionY"></block>*/
+
