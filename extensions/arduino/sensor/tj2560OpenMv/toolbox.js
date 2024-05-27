@@ -22,6 +22,7 @@ function addToolbox () {
     <block type="tj2560OpenMv_B" id="tj2560OpenMv_B"></block>
     <sep gap="36"/>
     <block type="tj2560OpenMv_readColorBlob" id="tj2560OpenMv_readColorBlob"></block>
+    <block type="tj2560OpenMv_locateColor" id="tj2560OpenMv_locateColor"></block>
     <block type="tj2560OpenMv_blobColor" id="tj2560OpenMv_blobColor"></block>
     <block type="tj2560OpenMv_blank" id="tj2560OpenMv_blank"></block>
     <block type="tj2560OpenMv_red" id="tj2560OpenMv_red"></block>

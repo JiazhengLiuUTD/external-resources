@@ -128,6 +128,7 @@ function addMsg (Blockly) {
         TJ2560OPENMV_L:'L通道数值',
         TJ2560OPENMV_A:'A通道数值',
         TJ2560OPENMV_B:'B通道数值',
+        TJ2560OPENMV_LOCATECOLOR:'定位 %1 色块位置'
     });
     return Blockly;
 }

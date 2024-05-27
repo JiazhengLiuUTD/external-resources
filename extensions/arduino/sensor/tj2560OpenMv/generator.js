@@ -159,6 +159,11 @@ function addGenerator (Blockly) {
         return `openmv.readBlockColor();\n`;
     };
 
+    Blockly.Arduino.tj2560OpenMv_locateColor = function (block) {
+        const color = block.getFieldValue('COLOR');
+        return `openmv.locateColor(${color});\n`;
+    };
+
     Blockly.Arduino.tj2560OpenMv_blobColor = function () {
         return [`openmv.z.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
     };

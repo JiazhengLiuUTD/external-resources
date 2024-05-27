@@ -446,10 +446,34 @@ function addBlocks (Blockly) {
         }
     };
 
+    //Color location
     Blockly.Blocks.tj2560OpenMv_readColorBlob = {
         init: function () {
             this.jsonInit({
                 message0: Blockly.Msg.TJ2560OPENMV_READCOLORBLOB, // camera module learn color block
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.tj2560OpenMv_locateColor = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560OPENMV_LOCATECOLOR, 
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'COLOR',
+                        options: [
+                            [Blockly.Msg.TJ2560OPENMV_RED, '1'],
+                            [Blockly.Msg.TJ2560OPENMV_GREEN, '2'],
+                            [Blockly.Msg.TJ2560OPENMV_BLUE, '3'],
+                            [Blockly.Msg.TJ2560OPENMV_YELLOW, '4']
+                        ]
+                    }
+                ],
                 colour: colour,
                 secondaryColour: secondaryColour,
                 extensions: ['shape_statement']

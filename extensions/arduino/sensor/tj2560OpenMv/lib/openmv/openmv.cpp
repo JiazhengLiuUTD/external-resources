@@ -442,10 +442,10 @@ void OpenMV::locateColor(uint8_t id){
 
     String txData = "$4,B,";
     txData += id;
-    txData += "0,0,0#";
+    txData += ",0,0#";
 
-    // Serial.print("Info: readColorBlockPos() tx data: ");
-    // Serial.println(txData);
+    Serial.print("Info: readColorBlockPos() tx data: ");
+    Serial.println(txData);
 
     openmvSerial->print(txData);
     recive_data();
