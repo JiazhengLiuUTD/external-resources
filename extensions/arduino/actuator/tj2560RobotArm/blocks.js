@@ -2,8 +2,8 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 function addBlocks (Blockly) {
-    const color = '#FA3274';
-    const secondaryColour = '#B92656';
+    const color = '#00CED1';
+    const secondaryColour = '#00CED1';
 
     Blockly.Blocks.tj2560RobotArm_init = {
         init: function () {
