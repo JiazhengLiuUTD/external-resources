@@ -9,8 +9,16 @@ function addGenerator (Blockly) {
         return `robotarm.begin();\n`;
     };
 
+    Blockly.Arduino.tj2560RobotArm_home = function () {
+        return `robotarm.home();\n`;
+    };
+
     Blockly.Arduino.tj2560RobotArm_reset = function () {
         return `robotarm.reset();\n`;
+    };
+
+    Blockly.Arduino.tj2560RobotArm_status = function () {
+        return `robotarm.status();\n`;
     };
 
     Blockly.Arduino.tj2560RobotArm_offset = function (block) {

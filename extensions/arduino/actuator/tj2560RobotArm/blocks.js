@@ -16,6 +16,17 @@ function addBlocks (Blockly) {
         }
     };
 
+    Blockly.Blocks.tj2560RobotArm_home = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560ROBOTARM_HOME,
+                colour: color,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
     Blockly.Blocks.tj2560RobotArm_reset = {
         init: function () {
             this.jsonInit({
@@ -103,7 +114,7 @@ function addBlocks (Blockly) {
                 args0: [
                     {
                         type: 'input_value',
-                        name: 'SPEED'
+                        name: 'SPEED',
                     }
                 ],
                 colour: color,
@@ -314,6 +325,17 @@ function addBlocks (Blockly) {
                         name: 'N'
                     }
                 ],
+                colour: color,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.tj2560RobotArm_status = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560ROBOTARM_STATUS,
                 colour: color,
                 secondaryColour: secondaryColour,
                 extensions: ['shape_statement']

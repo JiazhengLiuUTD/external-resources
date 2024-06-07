@@ -23,7 +23,9 @@ public:
     RobotArm();
     void info_recv();
     void begin();
+    void home();
     void reset();
+    void status();
     void offset(String joint,uint32_t n);
     void set_speed(uint32_t speed);
     void cartesian_lin(String pos,String move,int x,int y,int z,int a);

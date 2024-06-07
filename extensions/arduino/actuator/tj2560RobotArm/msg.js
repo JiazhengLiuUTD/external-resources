@@ -12,7 +12,8 @@ function addMsg (Blockly) {
     });
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
         TJ2560ROBOTARM_CATEGORY: '机械臂',
-        TJ2560ROBOTARM_INIT: '机械臂回零',
+        TJ2560ROBOTARM_INIT: '机械臂初始化',
+        TJ2560ROBOTARM_HOME: '机械臂回零',
         TJ2560ROBOTARM_RESET: '机械臂回归初始位置',
         TJ2560ROBOTARM_M20: '机械臂 %1 至 %2 X %3 Y %4 Z %5 方向A %6',
         TJ2560ROBOTARM_SPEED:'机械臂运动速度 %1',
@@ -40,6 +41,7 @@ function addMsg (Blockly) {
         TJ2560ROBOTARM_SUCTION_CUP_BLOW:'吹',
         TJ2560ROBOTARM_ANGLE_MOVE:'机械臂向 %1 角度方向运动 %2',
         TJ2560ROBOTARM_OFFSET:'机械臂关节 %1 校准至 %2',
+        TJ2560ROBOTARM_STATUS:'机械臂状态查询',
     });
     return Blockly;
 }
