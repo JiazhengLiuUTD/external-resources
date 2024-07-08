@@ -92,7 +92,7 @@ typedef struct {
 class Servo
 {
 public:
-  Servo();
+  Servo(int max_angle);
   uint8_t attach(int pin);           // attach the given pin to the next free channel, sets pinMode, returns channel number or 0 if failure
   uint8_t attach(int pin, int min, int max); // as above but also sets min and max values for writes. 
   void detach();
@@ -104,7 +104,8 @@ public:
 private:
    uint8_t servoIndex;               // index into the channel data for this servo
    int8_t min;                       // minimum is this value times 4 added to MIN_PULSE_WIDTH    
-   int8_t max;                       // maximum is this value times 4 added to MAX_PULSE_WIDTH   
+   int8_t max;
+   int max_angle;                       // maximum is this value times 4 added to MAX_PULSE_WIDTH   
 };
 
 #endif

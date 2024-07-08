@@ -84,16 +84,24 @@ function addGenerator (Blockly) {
     };
 
     Blockly.Arduino.arduinoTj2560Ext_setServo = function (block) {
+        const type = block.getFieldValue('TYPE');
         const port = block.getFieldValue('PORT');
         const angle = Blockly.Arduino.valueToCode(block, 'ANGLE', Blockly.Arduino.ORDER_ATOMIC);
 
         Blockly.Arduino.includes_.arduinoTj2560Ext_onBoardDriver_io = `#include <io_tj2560.h>`;
         Blockly.Arduino.includes_.arduinoTj2560Ext_setServo = `#include <Tj2560Servo.h>`;
 
-        Blockly.Arduino.definitions_[`setServo${port}`] = `Servo servo_${port};`;
-        Blockly.Arduino.setups_[`setServo${port}`] = `servo_${port}.attach(pinMap[${port}][S6]);`;
+        if (type==2){
+            Blockly.Arduino.definitions_[`setServo${port}`] = `Servo servo_${type}_${port}(270);`;
+            Blockly.Arduino.setups_[`setServo${port}`] = `servo_${type}_${port}.attach(pinMap[${port}][S6],500,2500);`;
+        }
+        else {
+            Blockly.Arduino.definitions_[`setServo${port}`] = `Servo servo_${type}_${port}(180);`;
+            Blockly.Arduino.setups_[`setServo${port}`] = `servo_${type}_${port}.attach(pinMap[${port}][S6]);`;
+        }
 
-        const code = `servo_${port}.write(${angle});\n`;
+
+        const code = `servo_${type}_${port}.write(${angle});\n`;
         return code;
     };
 

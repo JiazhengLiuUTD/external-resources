@@ -220,8 +220,9 @@ static boolean isTimerActive(timer16_Sequence_t timer)
 
 /****************** end of static functions ******************************/
 
-Servo::Servo()
+Servo::Servo(int max_angle)
 {
+  this->max_angle=max_angle;
   if( ServoCount < MAX_SERVOS) {
     this->servoIndex = ServoCount++;                    // assign a servo index to this instance
 	servos[this->servoIndex].ticks = usToTicks(DEFAULT_PULSE_WIDTH);   // store default values  - 12 Aug 2009
@@ -266,8 +267,8 @@ void Servo::write(int value)
   if(value < MIN_PULSE_WIDTH)
   {  // treat values less than 544 as angles in degrees (valid values in microseconds are handled as microseconds)
     if(value < 0) value = 0;
-    if(value > 180) value = 180;
-    value = map(value, 0, 180, SERVO_MIN(),  SERVO_MAX());
+    if(value > this->max_angle) value = this->max_angle;
+    value = map(value, 0, this->max_angle, SERVO_MIN(),  SERVO_MAX());
   }
   this->writeMicroseconds(value);
 }
@@ -295,7 +296,7 @@ void Servo::writeMicroseconds(int value)
 
 int Servo::read() // return the value as degrees
 {
-  return  map( this->readMicroseconds()+1, SERVO_MIN(), SERVO_MAX(), 0, 180);
+  return  map( this->readMicroseconds()+1, SERVO_MIN(), SERVO_MAX(), 0, this->max_angle);
 }
 
 int Servo::readMicroseconds()

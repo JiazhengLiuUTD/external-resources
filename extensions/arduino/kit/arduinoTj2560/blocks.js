@@ -263,6 +263,14 @@ function addBlocks (Blockly) {
                 args0: [
                     {
                         type: 'field_dropdown',
+                        name: 'TYPE',
+                        options: [
+                            ['1', '1'],
+                            ['2', '2']
+                        ]
+                    },
+                    {
+                        type: 'field_dropdown',
                         name: 'PORT',
                         options: [
                             ['P1', 'P1'],
