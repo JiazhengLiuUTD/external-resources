@@ -43,18 +43,10 @@ void RoboticArm::home()
 }
 void RoboticArm::reset()
 {
-    //msg="G90\r\nG0 X0 Y140 Z140 F60";
+    msg="G90\r\nG0 X0 Y140 Z140 F60";
     //msg="$m\r\n";
-    msg="G90";
     Serial3.println(msg);
-    Serial.print("Message Sent: ");
-    Serial.println(msg);
-    info_recv();
-    Serial.print(info);
-    Serial.println("");
 
-    msg="G0 X0 Y140 Z140 F60";
-    Serial3.println(msg);
     Serial.print("Message Sent: ");
     Serial.println(msg);
     info_recv();
@@ -64,15 +56,8 @@ void RoboticArm::reset()
 void RoboticArm::cartesian_lin(String pos,String move,int x,int y,int z,uint32_t f)
 {
     msg=" G"+pos;
-    Serial.print("Message Sent: ");
-    Serial.println(msg);
-    info_recv();
-    Serial.print(info);
-    Serial.println("");
-
     //msg+=" G"+move;
-    //msg+="\r\nG1";
-    msg="G1";
+    msg+="\r\nG1";
     msg+=" X"+String(x);
     msg+=" Y"+String(y);
     msg+=" Z"+String(z);
@@ -88,15 +73,7 @@ void RoboticArm::cartesian_lin(String pos,String move,int x,int y,int z,uint32_t
 
 void RoboticArm::dir_move(String dir, uint32_t n,uint32_t f)
 {
-    //msg="G91\r\nG1 ";
-    msg="G91";
-    Serial.print("Message Sent: ");
-    Serial.println(msg);
-    info_recv();
-    Serial.print(info);
-    Serial.println("");
-
-    msg="G1 ";
+    msg="G91\r\nG1 ";
     msg+=dir+String(n);
     msg+=" F"+String(f);
     Serial3.println(msg);
