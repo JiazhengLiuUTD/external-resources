@@ -38,6 +38,7 @@ function addBlocks (Blockly) {
                         name: 'MODE',
                         options: [
                             [Blockly.Msg.TJ2560OPENMV_SETMODE_COLORBLOB, '4'],
+                            [Blockly.Msg.TJ2560OPENMV_SETMODE_SHAPE, '5'],
                             [Blockly.Msg.TJ2560OPENMV_SETMODE_COLORMODE, '1'],
                             [Blockly.Msg.TJ2560OPENMV_SETMODE_QRCODEMODE, '2'],
                             [Blockly.Msg.TJ2560OPENMV_SETMODE_LINEMODE, '3']

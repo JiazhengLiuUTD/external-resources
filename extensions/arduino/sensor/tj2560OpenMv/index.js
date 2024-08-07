@@ -7,7 +7,7 @@ const tj2560OpenMv = formatMessage => ({
     version: '1.0.0',
     supportDevice: ['arduinoTj2560'],
     author: 'ArthurZheng',
-    iconURL: `asset/tj2560OpenMv.jpg`,
+    iconURL: `asset/tj2560OpenMv.png`,
     description: formatMessage({
         id: 'tj2560OpenMv.description',
         default: 'Camera Module.'

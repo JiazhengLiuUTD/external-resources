@@ -129,6 +129,7 @@ function addMsg (Blockly) {
         TJ2560OPENMV_A:'A通道数值',
         TJ2560OPENMV_B:'B通道数值',
         TJ2560OPENMV_LOCATECOLOR:'定位 %1 色块位置',
+        TJ2560OPENMV_SETMODE_SHAPE:'形状识别',
         TJ2560OPENMV_READSHAPE:'视觉模块读取形状',
         TJ2560OPENMV_SHAPE:'形状',
         TJ2560OPENMV_CIRCLE:'圆形',
