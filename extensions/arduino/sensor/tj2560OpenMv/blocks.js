@@ -635,7 +635,7 @@ function addBlocks (Blockly) {
         }
     };
     
-    Blockly.Blocks.tj2560OpenMv_othershape = {
+    Blockly.Blocks.tj2560OpenMv_otherShape = {
         init: function () {
             this.jsonInit({
                 message0: Blockly.Msg.TJ2560OPENMV_OTHERSHAPE, // color block position X axis value
