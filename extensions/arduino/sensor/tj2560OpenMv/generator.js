@@ -200,6 +200,10 @@ function addGenerator (Blockly) {
         return [`openmv.y.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
     };
 
+    Blockly.Arduino.tj2560OpenMv_readShape = function () {
+        return `openmv.readShape();\n`;
+    };
+
     Blockly.Arduino.tj2560OpenMv_shape = function () {
         return [`openmv.z.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
     };
