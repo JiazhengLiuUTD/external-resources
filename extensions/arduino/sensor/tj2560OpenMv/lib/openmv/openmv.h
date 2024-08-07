@@ -32,6 +32,7 @@ public:
     void readBlockColor();
     void locateColor(uint8_t id);
     void resetBlockColorRecognize();
+    void readShape();
     
 
     // 5 位解析分割的数据

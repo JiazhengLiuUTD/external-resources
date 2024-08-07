@@ -469,3 +469,13 @@ void OpenMV::resetBlockColorRecognize()
     openmvSerial->print(txData);
     recive_data();
 }
+
+void OpenMV::readShape(){
+    clear_data();
+    timeoutTime=500;
+
+    String txData="$5,A,0,0,0#";
+
+    openmvSerial->print(txData);
+    recive_data();
+}

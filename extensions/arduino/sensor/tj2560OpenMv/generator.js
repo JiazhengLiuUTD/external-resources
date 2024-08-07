@@ -200,6 +200,30 @@ function addGenerator (Blockly) {
         return [`openmv.y.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
     };
 
+    Blockly.Arduino.tj2560OpenMv_shape = function () {
+        return [`openmv.z.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_circle = function () {
+        return [`1`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_rect = function () {
+        return [`2`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_otherShape = function () {
+        return [`0`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_shapePositionX = function () {
+        return [`openmv.x.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
+    Blockly.Arduino.tj2560OpenMv_shapePositionY = function () {
+        return [`openmv.y.toInt()`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
     return Blockly;
 }
 

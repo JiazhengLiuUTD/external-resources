@@ -128,7 +128,14 @@ function addMsg (Blockly) {
         TJ2560OPENMV_L:'L通道数值',
         TJ2560OPENMV_A:'A通道数值',
         TJ2560OPENMV_B:'B通道数值',
-        TJ2560OPENMV_LOCATECOLOR:'定位 %1 色块位置'
+        TJ2560OPENMV_LOCATECOLOR:'定位 %1 色块位置',
+        TJ2560OPENMV_READSHAPE:'视觉模块读取形状',
+        TJ2560OPENMV_SHAPE:'形状',
+        TJ2560OPENMV_CIRCLE:'圆形',
+        TJ2560OPENMV_RECT:'矩形',
+        TJ2560OPENMV_OTHERSHAPE:'其他',
+        TJ2560OPENMV_SHAPEPOSITIONX: '形状 X 坐标数值',
+        TJ2560OPENMV_SHAPEPOSITIONY: '形状 Y 坐标数值',
     });
     return Blockly;
 }

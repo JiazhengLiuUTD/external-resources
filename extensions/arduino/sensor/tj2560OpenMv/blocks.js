@@ -591,6 +591,84 @@ function addBlocks (Blockly) {
         }
     };
 
+    Blockly.Blocks.tj2560OpenMv_readShape = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560OPENMV_READSHAPE, // camera module read shape
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.tj2560OpenMv_shape = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560OPENMV_SHAPE, // color block position X axis value
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['output_number']
+            });
+        }
+    };
+
+    Blockly.Blocks.tj2560OpenMv_circle = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560OPENMV_CIRCLE, // color block position X axis value
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['output_number']
+            });
+        }
+    };
+
+    Blockly.Blocks.tj2560OpenMv_rect = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560OPENMV_RECT, // color block position X axis value
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['output_number']
+            });
+        }
+    };
+    
+    Blockly.Blocks.tj2560OpenMv_othershape = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560OPENMV_OTHERSHAPE, // color block position X axis value
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['output_number']
+            });
+        }
+    };
+
+    Blockly.Blocks.tj2560OpenMv_shapePositionX = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560OPENMV_SHAPEPOSITIONX, // color block position X axis value
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['output_number']
+            });
+        }
+    };
+
+    Blockly.Blocks.tj2560OpenMv_shapePositionY = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TJ2560OPENMV_SHAPEPOSITIONY, // color block position Y axis value
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['output_number']
+            });
+        }
+    };
+
+
     return Blockly;
 }
 
