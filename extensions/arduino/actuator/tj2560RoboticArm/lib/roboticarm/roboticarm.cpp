@@ -43,7 +43,7 @@ void RoboticArm::home()
 }
 void RoboticArm::reset()
 {
-    msg="G90\r\nG0 X0 Y140 Z140 F60";
+    msg="G90\r\nG0 X0 Y140 Z130 F60";
     //msg="$m\r\n";
     Serial3.println(msg);
 
