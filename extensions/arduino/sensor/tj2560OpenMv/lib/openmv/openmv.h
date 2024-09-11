@@ -41,9 +41,10 @@ public:
     String z = "";
     String x = "";
     String y = "";
+    SoftwareSerial *openmvSerial;
 
 private:
-    SoftwareSerial *openmvSerial;
+    //SoftwareSerial *openmvSerial;
     void *Debug;
     bool NewLineReceived = false; //前一次数据结束标志
     bool StartBit = false;        //协议开始标志

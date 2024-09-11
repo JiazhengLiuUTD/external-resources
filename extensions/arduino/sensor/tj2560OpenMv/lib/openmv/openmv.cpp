@@ -11,7 +11,7 @@ void OpenMV::begin()
     Serial.println("-----------------------");
     Serial.println("| OpenMV start        |");
     Serial.println("-----------------------");
-    openmvSerial->begin(115200);
+    openmvSerial->begin(9600);
 }
 
 void OpenMV::recive_data()
