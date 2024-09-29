@@ -289,5 +289,7 @@ module.exports = {
         'tj2560RobotArm_SS.description':'wlkata四轴机械臂（软串口）。',
         'tj2560RoboticArm.name':'四轴机械臂',
         'tj2560RoboticArm.description':'四轴机械臂。',
+        'tj2560WaterPump.name':'水泵',
+        'tj2560WaterPump.description':'水泵。',
     }
 };
