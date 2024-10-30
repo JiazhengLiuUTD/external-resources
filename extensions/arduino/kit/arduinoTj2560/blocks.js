@@ -212,6 +212,57 @@ function addBlocks (Blockly) {
         }
     };
 
+    /* ---------------- 板载水泵 ------------------ */
+    Blockly.Blocks.arduinoTj2560Ext_onBoardWaterPumpOn = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.ARDUINOTJ2560EXT_ONBOARDWATERPUMPON,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'PORT',
+                        options: [
+                            ['M1', 'M1'],
+                            ['M2', 'M2'],
+                            ['M3', 'M3'],
+                            ['M4', 'M4']
+                        ]
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'SPEED'
+                    }
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.arduinoTj2560Ext_onBoardWaterPumpOff = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.ARDUINOTJ2560EXT_ONBOARDWATERPUMPOFF,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'PORT',
+                        options: [
+                            ['M1', 'M1'],
+                            ['M2', 'M2'],
+                            ['M3', 'M3'],
+                            ['M4', 'M4']
+                        ]
+                    }
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
     /* ---------------- 编码器 ------------------ */
     Blockly.Blocks.arduinoTj2560Ext_onBoardEncoderRead = {
         init: function () {

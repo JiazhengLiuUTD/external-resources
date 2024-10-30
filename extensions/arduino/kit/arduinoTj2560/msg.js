@@ -83,7 +83,9 @@ function addMsg (Blockly) {
         ARDUINOTJ2560EXT_ISIRPRESS: '红外遥控器通道 %1 按键 %2 被按下?',
         ARDUINOTJ2560EXT_POWER: '电源',
         ARDUINOTJ2560EXT_SETSERVO: '设置 %1 舵机端口 %2 角度 %3',
-        ARDUINOTJ2560EXT_SETTIME: '等待 %1 微秒'
+        ARDUINOTJ2560EXT_SETTIME: '等待 %1 微秒',
+        ARDUINOTJ2560EXT_ONBOARDWATERPUMPON:'驱动 %1 板载水泵以速率 %2 运行',
+        ARDUINOTJ2560EXT_ONBOARDWATERPUMPOFF:'驱动板载水泵 %1 停止运行',
     });
     return Blockly;
 }

@@ -63,6 +63,23 @@ function addGenerator (Blockly) {
         return `onBoardDriver_${port}.stop();\n`;
     };
 
+    Blockly.Arduino.arduinoTj2560Ext_onBoardWaterPumpOn = function (block) {
+        const port = block.getFieldValue('PORT');
+        const speed = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
+
+        Blockly.Arduino.includes_.arduinoTj2560Ext_onBoardDriver_io = `#include <io_tj2560.h>`;
+        Blockly.Arduino.includes_.arduinoTj2560Ext_onBoardDriver_init = `#include <L298N.h>`;
+        Blockly.Arduino.definitions_[`arduinoTj2560Ext_onBoardDriver_init_${port}`] = `L298N onBoardDriver_${port}(pinMap[${port}][EN], pinMap[${port}][S1], pinMap[${port}][S2]);`;
+
+        return `onBoardDriver_${port}.run(L298N_BACKWARD, ${speed});\n`;
+    };
+
+    Blockly.Arduino.arduinoTj2560Ext_onBoardWaterPumpOff = function (block) {
+        const port = block.getFieldValue('PORT');
+
+        return `onBoardDriver_${port}.stop();\n`;
+    };
+
     Blockly.Arduino.arduinoTj2560Ext_onBoardEncoderRead = function (block) {
         const port = block.getFieldValue('PORT');
 

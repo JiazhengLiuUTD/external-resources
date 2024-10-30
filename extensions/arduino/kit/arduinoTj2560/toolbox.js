@@ -41,6 +41,15 @@ function addToolbox () {
     </block>
     <block type="arduinoTj2560Ext_onBoardDriverStop" id="arduinoTj2560Ext_onBoardDriverStop">
     </block>
+    <block type="arduinoTj2560Ext_onBoardWaterPumpOn" id="arduinoTj2560Ext_onBoardWaterPumpOn">
+        <value name="SPEED">
+            <shadow type="math_uint8_number">
+                <field name="NUM">255</field>
+            </shadow>
+        </value>
+    </block>
+    <block type="arduinoTj2560Ext_onBoardWaterPumpOff" id="arduinoTj2560Ext_onBoardWaterPumpOff">
+    </block>
     <block type="arduinoTj2560Ext_onBoardEncoderRead" id="arduinoTj2560Ext_onBoardEncoderRead"></block>
     <block type="arduinoTj2560Ext_onBoardEncoderReset" id="arduinoTj2560Ext_onBoardEncoderReset"></block>
     <sep gap="36"/>
