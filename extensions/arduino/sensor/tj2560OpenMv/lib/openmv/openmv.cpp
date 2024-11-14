@@ -479,3 +479,23 @@ void OpenMV::readShape(){
     openmvSerial->print(txData);
     recive_data();
 }
+
+void OpenMV::readFiveChessStep(){
+    clear_data();
+    timeoutTime=500;
+
+    String txData="$6,A,0,0,0#";
+
+    openmvSerial->print(txData);
+    recive_data();
+}
+
+void OpenMV::setupNewGame(){
+    clear_data();
+    timeoutTime=500;
+
+    String txData="$6,B,0,0,0#";
+
+    openmvSerial->print(txData);
+    recive_data();
+}
