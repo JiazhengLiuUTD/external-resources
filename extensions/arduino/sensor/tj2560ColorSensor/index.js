@@ -5,7 +5,7 @@ const tj2560ColorSensor = formatMessage => ({
     }),
     extensionId: 'tj2560ColorSensor',
     version: '1.1.0',
-    supportDevice: ['arduinoTj2560'],
+    supportDevice: ['arduinoTj2560', 'TJ2560HRC_arduinoTj2560'],
     author: 'Bright',
     iconURL: `asset/tj2560ColorSensor.jpg`,
     description: formatMessage({

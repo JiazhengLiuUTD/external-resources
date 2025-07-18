@@ -2,6 +2,7 @@ module.exports = [
     // Buid-in device
 	'arduinoTj2560',
 	'tjabKit_arduinoUno',
+    'TJ2560HRC_arduinoTj2560',
     'arduinoUno',
     'arduinoNano_arduinoUno',
     'arduinoMini_arduinoUno',

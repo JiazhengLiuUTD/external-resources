@@ -5,7 +5,7 @@ const tj2560GrayscaleSensor = formatMessage => ({
     }),
     extensionId: 'tj2560GrayscaleSensor',
     version: '1.0.1',
-    supportDevice: ['arduinoTj2560'],
+    supportDevice: ['arduinoTj2560', 'TJ2560HRC_arduinoTj2560'],
     author: 'Bright',
     iconURL: `asset/tj2560GrayscaleSensor.jpg`,
     description: formatMessage({

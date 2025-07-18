@@ -5,7 +5,7 @@ const tj2560RoboticArm = formatMessage => ({
     }),
     extensionId: 'tj2560RoboticArm',
     version: '1.0.0',
-    supportDevice: ['arduinoTj2560'],
+    supportDevice: ['arduinoTj2560', 'TJ2560HRC_arduinoTj2560'],
     author: 'Jiazheng Liu',
     iconURL: `asset/tj2560RoboticArm.png`,
     description: formatMessage({

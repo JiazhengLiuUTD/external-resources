@@ -5,7 +5,7 @@ const tj2560FiveRgbLed = formatMessage => ({
     }),
     extensionId: 'tj2560FiveRgbLed',
     version: '1.0.0',
-    supportDevice: ['arduinoTj2560'],
+    supportDevice: ['arduinoTj2560', 'TJ2560HRC_arduinoTj2560'],
     author: 'ArthurZheng',
     iconURL: `asset/tj2560FiveRgbLed.jpg`,
     description: formatMessage({

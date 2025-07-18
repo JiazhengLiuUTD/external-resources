@@ -291,5 +291,9 @@ module.exports = {
         'tj2560RoboticArm.description':'四轴机械臂。',
         'tj2560WaterPump.name':'水泵',
         'tj2560WaterPump.description':'水泵。',
+
+        'TJ2560HRC.description': '太敬人形机器人控制器',
+        'tj2560HrcOpenMv.name': '人形机器人视觉模块',
+        'tj2560HrcOpenMv.description': '人形机器人视觉模块。',
     }
 };

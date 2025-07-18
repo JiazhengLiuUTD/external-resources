@@ -5,7 +5,7 @@ const tj2560SmokeRocker = formatMessage => ({
     }),
     extensionId: 'tj2560SmokeRocker',
     version: '1.0.0',
-    supportDevice: ['arduinoTj2560'],
+    supportDevice: ['arduinoTj2560', 'TJ2560HRC_arduinoTj2560'],
     author: 'ArthurZheng',
     iconURL: `asset/tj2560SmokeRocker.jpg`,
     description: formatMessage({

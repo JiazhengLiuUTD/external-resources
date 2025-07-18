@@ -5,7 +5,7 @@ const tj2560DoubleLineTracker = formatMessage => ({
     }),
     extensionId: 'tj2560DoubleLineTracker',
     version: '1.0.1',
-    supportDevice: ['arduinoTj2560'],
+    supportDevice: ['arduinoTj2560', 'TJ2560HRC_arduinoTj2560'],
     author: 'ArthurZheng',
     iconURL: `asset/tj2560DoubleLineTracker.jpg`,
     description: formatMessage({
